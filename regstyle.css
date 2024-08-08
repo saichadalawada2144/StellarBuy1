@@ -1,0 +1,107 @@
+.body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure the background image doesn't overflow */
+}
+
+img {
+    position: fixed; /* Ensure the background image is fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+#container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(20, 2, 2, 0.221); 
+    padding: 60px;
+    z-index: 1; /* Ensure it's above the background image */
+    border-radius: 50px;
+    border:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+@keyframes ani {
+    0% {
+        transform:translate() scale(0.9);
+        box-shadow: none;
+    }
+    50% {
+        transform:translate() scale(1.02);
+        box-shadow: 0 0 10px hsl(350, 100%, 68%), 0 0 80px 2px hsl(350, 100%, 68%);
+    }
+    100%{
+        transform:translate() scale(0.9);
+        box-shadow: none;
+    }
+}
+#namer,#passwordr{
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:transparent ;
+    color:white;
+    border-bottom: 2px solid white;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+}
+#namer::placeholder{
+    color: white;
+}
+#passwordr::placeholder{
+    color: white;
+}
+#login{
+    position: relative;
+    color:white;
+}
+#ull{
+    position: relative;
+    top:-25px;
+    color:hsl(350, 100%, 68%);
+}
+#regbutt{
+    margin-top: 30px;
+    padding:12px;
+    width: 120px;
+    font-size: 1rem;
+    background-color: hsl(350, 100%, 68%);
+    align-self: center;
+    color:white;
+    border-color: white;
+    border-radius: 15px;
+}
+#regbutt:hover{
+    background-color:hsl(350, 100%, 68%);
+    color:beige;
+    animation: ani 6s  linear infinite alternate;
+}
+#container:hover{
+    animation: ani 3s  linear infinite alternate;
+}
+#nu{
+    font-size: 1rem;
+    color:beige;
+}
+#rl{
+    color:gold;
+    font-size: 1.3rem;
+}
+

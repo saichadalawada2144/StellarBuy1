@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Status</title>
+    <link rel="stylesheet" href="delivery.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Delivery Status</h1>
+        <div class="animation-container">
+            <div class="truck-wrapper">
+                <div class="truck">
+                    <div class="truck-body">
+                        <div class="cargo"></div>
+                    </div>
+                    <div class="wheel wheel-1"></div>
+                    <div class="wheel wheel-2"></div>
+                    <div class="gift-box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="status">
+            <p id="status-text">Your order is being prepared...</p>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </div>
+        <div class="tooltip-container">
+            <span class="tooltip" id="tooltip-text">Order Placed</span>
+        </div>
+        <div id="home-button" class="home-button" style="display: none;">
+            <button onclick="goHome()">Go to Home</button>
+        </div>
+    </div>
+
+    <script src="delivery.js"></script>
+</body>
+</html>

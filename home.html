@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="logo1.jpeg">
+    <title>Stellar Buy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Buy</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#"><img src="logo1.jpeg" class="logopng"></a></div>
+            <b id="user-name">Name</b>
+          <form class="search" action="#" onsubmit="return performSearch()">
+                <input type="text" placeholder="Search..." class="sbar" id="searchInput" >
+                <button type="submit" class="sbutt"><img src="search.png" class="searchpng"></button>
+            </form>
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="about.html" id="about">About</a></li>
+                <li><a href="contact.html" id="contact">Contact</a></li>
+                <li><a href="cart.html" id="orders">Orders</a></li>
+                <li><a href="cart.html" id="cart">Cart</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+    <div class="s-div" style="display: none;">
+    </div>
+    <div class="slider">  
+        <div class="slides">
+            <img class="slide" src="product images\slider1.jpg" alt="Image #1">
+            <img class="slide" src="product images\slider2.jpg" alt="Image #2">
+            <img class="slide" src="product images\slider4.jpg" alt="Image #3">
+        </div>
+        <button class="prev" onclick="prevslide()">&#10094</button>
+        <button class="next" onclick="nextslide()">&#10095</button>
+    </div>
+    <div class="products">
+        <div class="p" onclick="highlightProduct(this)">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\ps5.jpg" class="i"></a>
+            <a href="#" class="pname"  id="pz" onclick="showButtons(this)">Sony Ps5<br></a>
+            <a href="#" class="pcost" id="pz" onclick="showButtons()">45000/-<br></a>
+            <button class="buy"  onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\iphone.jpg" class="i"></a>
+            <a href="#" id="pz"class="pname" onclick="showButtons()">iphone<br></a>
+            <a href="#" id="pz"class="pcost" onclick="showButtons()">49000/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\headphones.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">sony headphones<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">5000/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\ipad.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">ipad<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">129900/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\macbook.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">mac book pro<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">120000/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\monitor.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">asus monitor<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">19000/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\tv.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">sony smart tv<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">49000/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\sphone.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">Samsung s27<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">69000/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\smartwatch.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">noise pulse<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">2900/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\powerbank.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">HTC power-bank<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">1000/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\shoes.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">nike shoes<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">5499/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+        <div class="p">
+            <a href="#" onclick="showButtons(this)"  class="product-link" ><img src="product images\football.jpg" class="i"></a>
+            <a href="#" id="pz" class="pname" onclick="showButtons()">puma football<br></a>
+            <a href="#" id="pz" class="pcost" onclick="showButtons()">2299/-<br></a>
+            <button class="buy" onclick="buynow(this)" style="display: none;">Buy</button>
+            <button class="cart" onclick="cartnow(this)" style="display: none;">Add Cart</button>
+        </div>
+    </div>
+    <script src="home.js"></script>
+    <script>
+        document.querySelectorAll('.product-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                // Your custom code here
+            });
+        });
+
+        document.querySelectorAll('.pname').forEach(name => {
+            name.addEventListener('click', function(event) {
+                event.preventDefault();
+                // Your custom code here
+            });
+        });
+
+        document.querySelectorAll('.pcost').forEach(cost => {
+            cost.addEventListener('click', function(event) {
+                event.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

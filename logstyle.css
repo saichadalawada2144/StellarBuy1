@@ -1,0 +1,99 @@
+.body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure the background image doesn't overflow */
+}
+
+img {
+    position: fixed; /* Ensure the background image is fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+#container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.105); 
+    padding: 60px;
+    z-index: 1; /* Ensure it's above the background image */
+    border-radius: 50px;
+    border:none;
+    
+}
+
+@keyframes ani {
+    0% {
+        transform: translateX() scale(0.9);
+        box-shadow: none;
+    }
+    50% {
+        transform: translate() scale(1.02);
+        box-shadow: 0 0 10px rgba(255, 217, 0, 0.806) , 0 0 80px 2px rgba(255, 217, 0, 0.824);
+    }
+    100%{
+        transform: translateX() scale(0.9);
+        box-shadow: none;
+    }
+}
+#nam,#pass{
+    font-size: 1.5rem;
+    text-align: center;
+    background-color:transparent ;
+    color:white;
+    border-bottom: 2px solid gold;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+}
+#login{
+    color:rgb(0, 255, 213);
+}
+#ull{
+    position: relative;
+    top:-20px;
+    color:gold;
+}
+#loginbutt{
+    margin-top: 30px;
+    padding:10px;
+    width: 80px;
+    font-size: 1rem;
+    background-color: transparent;
+    align-self: center;
+    color:gold;
+    border-color: gold;
+    border-radius: 15px;
+}
+#loginbutt:hover{
+    background-color: hsla(51, 100%, 50%, 0.811);
+    color:beige;
+    animation: ani 10s  linear infinite alternate;
+}
+#container:hover{
+    animation: ani 3s  linear infinite alternate;
+}
+#nu{
+    font-size: 1rem;
+    color:beige;
+}
+#rl{
+    color:gold;
+    font-size: 1.3rem;
+}
+
